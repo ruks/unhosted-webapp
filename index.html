@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML 2 extension</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="script.js"></script>
+</head>
+
+<body>
+<div>
+
+<div id="displaydiv">
+
+
+	<table>
+		<tr>
+        	<td>Account</td>
+            <td><select id="setting" onchange="setSetting()">
+                <option value="gmail">unhostedcse@gmail.com</option>
+                <option value="hotmail">unhostedcse@outlook.com</option>  
+                <option value="local">localhost</option>
+                <option value="unhosted">unhosted</option>
+                </select>
+            </td>
+     	</tr>
+        <tr>
+            <td>output</td>
+            <td><textarea id="text" rows="5" cols="45"></textarea></td>        
+        </tr>
+        <tr>
+        	<td></td>
+        	<td></td>                        
+        	<td><button type="button" onclick="document.getElementById('text').value=''">Clear</button></td>
+        </tr>
+    </table>    
+</div>
+  
+<div id="emailsdiv">
+    <textarea id="mailbody" rows="5" cols="45"></textarea>
+    <table style="width:60%" border="1" id="myTable">
+      <tr>
+        <td>ID</td>
+        <td>seen</td>
+        <td>subject</td> 
+        <td>from</td>    
+      </tr>  
+    </table>
+</div>
+  
+<div id="imapdiv">  
+	<!-- <label>user</label> -->
+    <table>
+      <tr>
+        <td>user:</td>
+        <td><input type="text" id="user" value="unhostedcse@gmail.com"></td>
+      </tr> 
+      <tr>
+        <td>pass:</td>
+        <td><input type="text" id="pass" value="unhostedcse12345"></td>
+      </tr>  
+      <tr>
+      	<td>smtp:</td>
+        <td><input type="text" id="smtp" value="smtp.gmail.com"></td>
+      </tr>
+      <tr>
+      	<td>smtpport:</td>
+      	<td><input type="text" id="smtpport" value="465"></td>        
+      	<td><select id="smtpsec" onchange="">
+            <option value="ssl">SSL</option>
+            <option value="tls">TLS</option>  
+            <option value="no">NO</option>  
+            </select>
+    	</td>        
+      </tr>
+      <tr>
+      	<td>imap:</td>
+        <td><input type="text" id="imap" value="imap.gmail.com"></td>
+      </tr>
+      <tr>
+      	<td>imapport:</td>
+      	<td><input type="text" id="imapport" value="993"></td>        
+      	<td><select id="imapsec" onchange="">
+          	<option value="ssl">SSL</option>
+          	<option value="tls">TLS</option>  
+          	<option value="no">NO</option>  
+        	</select>
+    	  </td>        
+        <!-- <td><input type="text" id="msgid" value=""></td> -->
+      </tr>
+      <tr>
+      	<td></td>
+      	<td></td>        
+      	<td><button type="button" onclick="start('imap')">Retrive</button></td>        
+        <!-- <td><button type="button" onclick="start('getbody')">getBody</button></td>  -->
+      </tr>      
+    </table>                 
+</div>
+
+<div id="smtpdiv"> 
+<table>
+      <tr>
+        <td>to:</td>
+        <td><input type="text" id="to" value="unhostedcse@gmail.com"></td>
+      </tr>
+	  <tr>
+        <td>body:</td>
+        <td><textarea id="body" rows="10" cols="45">
+Subject: Testing unhosted
+Hi,
+This is mail from HTML5.
+MAIL will accept by extension.
+BYE.
+            </textarea>
+    	</td>        
+      </tr>
+      <tr>
+        <td></td>
+		<td></td>
+        <td><button type="button" onclick="start('smtp')">Send</button></td>                
+      </tr>
+</table>            
+</div>  
+
+</div>
+</body>
+</html>

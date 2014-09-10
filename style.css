@@ -1,0 +1,41 @@
+@charset "utf-8";
+#displaydiv {
+	width: 38%;
+	border: 2px solid #000099;
+	min-height: 20vh;
+	float: left;
+}
+#imapdiv {
+	width: 38%;
+	border: 2px solid #000099;
+	min-height: 30vmin;
+	float: left;
+}
+#smtpdiv {
+	width: 38%;
+	border: 2px solid #000099;
+	min-height: 40vmin;
+	float: left;
+}
+#emailsdiv {
+	width: 60%;
+	height: 10%;
+	border: 2px solid #000099;
+	float: right;
+	clear: right;
+	min-height: 95vh;
+}
+#imapdiv input {
+	width: 200px;
+}
+#smtpdiv input {
+	width: 200px;
+}
+
+.red{
+	background: red;
+}
+
+.nocolor{
+	background: yellow;
+}
