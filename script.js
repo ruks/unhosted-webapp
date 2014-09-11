@@ -1,4 +1,5 @@
-// JavaScript Documenttry{ 	
+// JavaScript Documenttry{ 		
+
 try{
  	document.addEventListener("MyAnswerEvent",function(e) { ExtensionAnswer(e); },false);
 
@@ -122,6 +123,7 @@ try{
  	}
 
 function setBody(val){
-	document.getElementById('mailbody').value=val;
+	document.getElementById('mailbodytxt').value=val;
+	document.getElementById('mailbody').innerHTML=val;
 }
 
